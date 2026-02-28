@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>RealityCheck AI</title>
+    <link rel="stylesheet" href="/style.css">
+</head>
+
+<body>
+
+<div class="card">
+
+    <h1>🎥 RealityCheck AI</h1>
+    <p>Face-Level Deepfake Detection</p>
+
+    <!-- UPLOAD SECTION -->
+    <div id="uploadSection">
+        <input type="file" id="videoInput">
+        <button type="button" onclick="uploadVideo()">Analyze</button>
+    </div>
+
+    <!-- LOADER -->
+    <div id="loader" class="hidden">
+        <div class="spinner"></div>
+    </div>
+
+    <!-- RESULTS SECTION -->
+    <div id="results" class="hidden">
+
+        <h3 id="verdict"></h3>
+
+        <div class="bar-container">
+            <div id="confidenceBar" class="bar"></div>
+        </div>
+
+        <p>
+            <strong>Deepfake Probability:</strong>
+            <span id="confidenceText"></span>
+        </p>
+
+        <p>
+            <strong>Faces Analyzed:</strong>
+            <span id="facesAnalyzed"></span>
+        </p>
+
+        <p>
+            <strong>Average Model Confidence:</strong>
+            <span id="averageConfidence"></span>
+        </p>
+
+        <p>
+            <strong>Stability Score:</strong>
+            <span id="stability"></span>
+        </p>
+
+        <br><br>
+
+        <button type="button" onclick="location.reload()">
+            Analyze Another Video
+        </button>
+
+    </div>
+
+</div>
+
+<script src="/script.js"></script>
+
+</body>
+</html>
